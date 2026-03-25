@@ -20,8 +20,7 @@ Exemplo de início:
 
 ---
 
-# 2. Regras de Negócio (mínimo: 5)
-Liste e descreva **cada RN** de forma clara.
+# 2. Regras de Negócio
 
 **RN01 — Venda condicionada ao estoque**
 
@@ -55,16 +54,41 @@ Exemplos de acessibilidade por cargos:
 # 3. Requisitos Funcionais (mínimo: 8)
 Liste os requisitos funcionais do seu MVP.
 
-**RF01 —**  
-**RF02 —**  
-**RF03 —**  
-**RF04 —**  
-**RF05 —**  
-**RF06 —**  
-**RF07 —**  
-**RF08 —**  
+**RF01 — Cadastrar clientes**
 
-(Adicione mais se quiser.)
+O sistema deve permitir que o atendente cadastre novos clientes, registrando informações básicas para identificação e histórico de compras.
+
+**RF02 — Consultar produtos**  
+
+O sistema deve permitir a pesquisa de produtos por nome, código de barras ou fabricante, exibindo preço, descrição e disponibilidade em estoque.
+
+**RF03 — Registrar vendas**
+
+O sistema deve permitir que o atendente registre vendas de produtos, informando itens, quantidades, forma de pagamento e cliente (quando houver).
+
+**RF04 — Emitir comprovantes de venda**  
+
+Após a finalização de uma venda, o sistema deve emitir automaticamente um comprovante contendo os dados da transação.
+
+**RF05 — Controlar estoque por unidade** 
+
+O sistema deve manter o controle de estoque individual por farmácia, atualizando as quantidades automaticamente após vendas, compras ou ajustes.
+
+**RF06 — Registrar compras de fornecedores**
+
+O sistema deve permitir o registro de compras, informando fornecedor, produtos, quantidades, valores e unidade que receberá o estoque.
+
+**RF07 — Gerenciar compras a pagar e a receber**
+
+O sistema deve permitir o registro, consulta e atualização de contas financeiras, incluindo datas de vencimento, pagamento/recebimento e status.
+
+**RF08 — Gerar relatórios gerenciais**  
+
+O sistema deve permitir a emissão de relatórios operacionais e financeiros, como:
+- vendas por período
+- estoque por unidade
+- produtos mais vendidos
+- contas em aberto
 
 ---
 
