@@ -8,15 +8,8 @@ Data: *25/03/2026*
 ---
 
 # 1. Definição do MVP
-Descreva aqui **qual parte do sistema** foi incluída no seu MVP.  
-Explique claramente:
 
-- O que está **dentro** do MVP  
-- O que está **fora** do MVP  
-- Por que você fez essas escolhas  
-
-Exemplo de início:  
-> “Meu MVP cobre o processo de venda desde a identificação/cadastro do cliente até a emissão do comprovante, incluindo tratamento de estoque insuficiente.”
+Meu MVP cobre o processo de venda, desde o cadastro ou identificação do cliente até a emissão do comprovante, incluindo consulta de produtos, verificação de estoque, registro da venda e geração de contas a receber em caso de pagamento a prazo. Ficam de fora funcionalidades como gestão de compras, contas a pagar, relatórios avançados, controle de múltiplas unidades e permissões detalhadas. Essas escolhas foram feitas para focar no fluxo principal do negócio, que é a venda, garantindo valor imediato, menor complexidade e facilidade de validação inicial do sistema.
 
 ---
 
