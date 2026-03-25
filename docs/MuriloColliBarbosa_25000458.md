@@ -95,12 +95,21 @@ O sistema deve permitir a emissão de relatórios operacionais e financeiros, co
 # 🛡 4. Requisitos Não Funcionais (mínimo: 4)
 Liste os RNFs do sistema conforme seu MVP.
 
-**RNF01 —**  
-**RNF02 —**  
-**RNF03 —**  
-**RNF04 —**  
+**RNF01 — Desempenho**
 
-(Adicione mais se quiser.)
+O sistema deve responder às operações de consulta (produtos, clientes e estoque) em até 2 segundos, mesmo com múltiplos usuários simultâneos.
+
+**RNF02 — Segurança**
+
+O sistema deve garantir controle de acesso por autenticação de usuário e senha, além de restringir funcionalidades conforme o perfil (atendente, gerente, financeiro etc.).
+
+**RNF03 — Disponibilidade**
+
+O sistema deve estar disponível 24 horas por dia, 7 dias por semana, com tolerância a falhas para não interromper as operações das farmácias.
+
+**RNF04 — Integridade e backup de dados**  
+
+O sistema deve garantir a integridade das informações e realizar backups automáticos diários, evitando perda de dados críticos.
 
 ---
 
