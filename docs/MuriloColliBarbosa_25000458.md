@@ -132,6 +132,8 @@ O sistema deve garantir a integridade das informações e realizar backups autom
 
 ### Diagramas do caso de uso
 
+<img width="472" height="516" alt="image" src="https://github.com/user-attachments/assets/20832ecb-e540-45b2-9518-676d4966837a" />
+
 ---
 
 ## **UC02 — Identificar clientes**
@@ -155,6 +157,8 @@ O sistema deve garantir a integridade das informações e realizar backups autom
 
 ### Diagramas do caso de uso
 
+<img width="384" height="306" alt="image" src="https://github.com/user-attachments/assets/0104a3c5-f6ad-4bf3-9f58-e7d93ea1cf10" />
+
 ---
 ## **UC03 — cadastrar clientes**
 **Ator(es):** Atendente.
@@ -176,6 +180,8 @@ O sistema deve garantir a integridade das informações e realizar backups autom
 - **Extend:** UC01
 
 ### Diagramas do caso de uso
+
+<img width="327" height="349" alt="image" src="https://github.com/user-attachments/assets/18f59e8e-1fcd-42cf-b11a-35418b735253" />
 
 ---
 ## **UC04 — Consultar produto**
@@ -199,6 +205,8 @@ O sistema deve garantir a integridade das informações e realizar backups autom
 
 ### Diagramas do caso de uso
 
+<img width="332" height="306" alt="image" src="https://github.com/user-attachments/assets/d15ea6f0-4c22-47b5-a206-d603ee372e13" />
+
 ---
 ## **UC05 — Verificar estoque**
 **Ator(es):** Sistema 
@@ -220,6 +228,8 @@ O sistema deve garantir a integridade das informações e realizar backups autom
 - **Extend:** UC04
 
 ### Diagramas do caso de uso
+
+<img width="222" height="154" alt="image" src="https://github.com/user-attachments/assets/b7cf74ab-f7d8-479a-b53a-eb5a307dcdf4" />
 
 ---
 ## **UC06 — registrar venda a prazo**
@@ -243,6 +253,8 @@ O sistema deve garantir a integridade das informações e realizar backups autom
 
 ### Diagramas do caso de uso
 
+<img width="406" height="349" alt="image" src="https://github.com/user-attachments/assets/6b3592bd-cc23-4215-994d-5a183c80c346" />
+
 ---
 ## **UC07 — Emitir comprovantes**
 **Ator(es):** Sistema  
@@ -264,6 +276,8 @@ O sistema deve garantir a integridade das informações e realizar backups autom
 - **Extend:** UC01
 
 ### Diagramas do caso de uso
+
+<img width="257" height="301" alt="image" src="https://github.com/user-attachments/assets/97f9c1c1-2b66-41b8-b7a0-e149cd181f34" />
 
 ---
 ## **UC08 — Gerar Conta a receber**
@@ -287,6 +301,8 @@ O sistema deve garantir a integridade das informações e realizar backups autom
 
 ### Diagramas do caso de uso
 
+<img width="292" height="198" alt="image" src="https://github.com/user-attachments/assets/d6e76415-527f-4c88-aa85-fe6d5fda40f9" />
+
 ---
 ## **UC09 — registrar compra**
 **Ator(es):** Gerente 
@@ -309,6 +325,8 @@ O sistema deve garantir a integridade das informações e realizar backups autom
 
 ### Diagramas do caso de uso
 
+<img width="419" height="349" alt="image" src="https://github.com/user-attachments/assets/68540a20-beb6-485b-8d6a-0eb2fe03fceb" />
+
 ---
 ## **UC10 — Atualizar estoque**
 **Ator(es):** Sistema 
@@ -330,6 +348,8 @@ O sistema deve garantir a integridade das informações e realizar backups autom
 - **Extend:** UC01, UC09
 
 ### Diagramas do caso de uso
+
+<img width="298" height="198" alt="image" src="https://github.com/user-attachments/assets/71d05bd5-414d-4703-9582-72c45839a2ad" />
 
 ---
 
