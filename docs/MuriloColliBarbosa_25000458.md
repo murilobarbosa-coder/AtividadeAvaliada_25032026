@@ -85,7 +85,7 @@ O sistema deve permitir a emissão de relatórios operacionais e financeiros, co
 
 ---
 
-# 🛡 4. Requisitos Não Funcionais (mínimo: 4)
+# 4. Requisitos Não Funcionais
 Liste os RNFs do sistema conforme seu MVP.
 
 **RNF01 — Desempenho**
@@ -103,6 +103,13 @@ O sistema deve estar disponível 24 horas por dia, 7 dias por semana, com toler�
 **RNF04 — Integridade e backup de dados**  
 
 O sistema deve garantir a integridade das informações e realizar backups automáticos diários, evitando perda de dados críticos.
+
+---
+# 5. Diagrama geral dos casos de uso
+
+---
+
+<img width="804" height="288" alt="image" src="https://github.com/user-attachments/assets/16d33784-cf62-4c23-a0ec-c88bafc8b21b" />
 
 ---
 
