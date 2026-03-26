@@ -106,41 +106,233 @@ O sistema deve garantir a integridade das informações e realizar backups autom
 
 ---
 
-# 5. Casos de Uso (mínimo: 10)
-### Inserir **diagrama de casos de uso geral**, demonstrando claramente:
-- os 10 casos
-- relação entre eles e atores
-- pelo menos 3 includes
-- pelo menos 3 extends
+# 6. Casos de Uso
 
 ---
 
-# 6. Documentação dos Casos de Uso
-Para **cada caso de uso**, utilize o template abaixo:
----
-
-## **UCXX — Nome do Caso de Uso**
-**Ator(es):**  
-**Descrição:**  
-**Pré-condições:**  
-**Pós-condições:**  
+## **UC01 — Realizar venda**
+**Ator(es): Atendente**  
+**Descrição:** Permite resgistrar a venda de produtos para um cliente.  
+**Pré-condições:** Sistema ativo e produtos cadastrados  
+**Pós-condições:** Venda registrada e estoque atualizado  
 
 ### Fluxo Principal
-1.  
-2.  
-3.  
-4.  
+1.  Atendente inicia a venda
+2.  Identifica ou cadastra cliente
+3.  Consulta produtos
+4.  Finaliza venda
 
 ### Fluxos Alternativos / Exceções
-- FA01 —  
-- FA02 —  
+- FA01 —  Produto sem estoque -> sistema bloqueia
+- FA02 —  Cliente não cadastrado -> direciona para cadastro
 
 ### Relacionamentos
-- **Include:** (listar quando aplicável)  
-- **Extend:** (listar quando aplicável)  
+- **Include:** UC02, UC03, UC04 e UC05
+- **Extend:** UC06, UC07  
 
-### Inserir o diagrama de atividades do Caso de Uso, demonstrando tudo o fluxo princial e alternativos/exceções.
+### Diagramas do caso de uso
 
 ---
 
-> Repita essa estrutura para **todos os seus casos de uso** (mínimo 10).
+## **UC02 — Identificar clientes**
+**Ator(es):** Atendente   
+**Descrição:** Permite localizar clientes já cadastrado. 
+**Pré-condições:** Cliente previamente cadastrado. 
+**Pós-condições:** Cliente vinculado a venda 
+
+### Fluxo Principal
+1.  Informar dados do cliente
+2.  Sistema busca cadastro
+3.  exibe informações
+
+### Fluxos Alternativos / Exceções
+- FA01 — Cliente não encontrado 
+- FA02 — Dados inválidos 
+
+### Relacionamentos
+- **Include:** nenhum
+- **Extend:** UC03
+
+### Diagramas do caso de uso
+
+---
+## **UC03 — cadastrar clientes**
+**Ator(es):** Atendente.
+**Descrição:** Permite registrar novo cliente no sistema. 
+**Pré-condições:** Cliente não existente. 
+**Pós-condições:** Cliente cadastrado 
+
+### Fluxo Principal
+1. Inserir dados  
+2. validar informações 
+3. Salvar cadastro 
+
+### Fluxos Alternativos / Exceções
+- FA01 —  Dados incompletos
+- FA02 —  Erro ao salvar
+
+### Relacionamentos
+- **Include:** nenhum
+- **Extend:** UC01
+
+### Diagramas do caso de uso
+
+---
+## **UC04 — Consultar produto**
+**Ator(es):** Atendente  
+**Descrição:**  Permite buscar produtos no sistema.
+**Pré-condições:**  produtos cadastrados
+**Pós-condições:**  Produtos exibido.
+
+### Fluxo Principal
+1. Inserir nome/código 
+2.  Sistema realiza busca
+3.  exibe resultado
+
+### Fluxos Alternativos / Exceções
+- FA01 —  Produto não encontrado
+- FA02 —  Falha na busca
+
+### Relacionamentos
+- **Include:** UC05
+- **Extend:** nenhum 
+
+### Diagramas do caso de uso
+
+---
+## **UC05 — Verificar estoque**
+**Ator(es):** Sistema 
+**Descrição:**  Verificar disponibilidade de produto no estoque
+**Pré-condições:** Produto Selecionado 
+**Pós-condições:**  Quantidade exibida
+
+### Fluxo Principal
+1.  Recebar produto
+2.  Consultar estoque
+3.  retornar quantidade
+
+### Fluxos Alternativos / Exceções
+- FA01 —  estoque zerado
+- FA02 —  erro no sistema
+
+### Relacionamentos
+- **Include:** nenhum 
+- **Extend:** UC04
+
+### Diagramas do caso de uso
+
+---
+## **UC06 — registrar venda a prazo**
+**Ator(es):** Atendente 
+**Descrição:**  Registra venda com pagamento futuro.
+**Pré-condições:**  Venda em andamento
+**Pós-condições:**  Conta a receber gerada
+
+### Fluxo Principal
+1.  Selecionar pagamento a prazo
+2.  Definir vencimento
+3.  Confirmar operação
+
+### Fluxos Alternativos / Exceções
+- FA01 — Cliente não autorizado 
+- FA02 —  Erro financwiro
+
+### Relacionamentos
+- **Include:** UC08 
+- **Extend:** UC01
+
+### Diagramas do caso de uso
+
+---
+## **UC07 — Emitir comprovantes**
+**Ator(es):** Sistema  
+**Descrição:** Gera comprovantes de venda 
+**Pré-condições:** Venda finalizada. 
+**Pós-condições:** Comprovante emitido 
+
+### Fluxo Principal
+1. Gera dados 
+2.  Montar comprovantes
+3.  exibir/imprimir
+
+### Fluxos Alternativos / Exceções
+- FA01 — Falha na impressão 
+- FA02 —  Dados inconsistentes
+
+### Relacionamentos
+- **Include:** nenhum  
+- **Extend:** UC01
+
+### Diagramas do caso de uso
+
+---
+## **UC08 — Gerar Conta a receber**
+**Ator(es):** Sistema  
+**Descrição:** Cria registro financeiro de venda a prazo 
+**Pré-condições:** Venda a prazo confirmada 
+**Pós-condições:**  contra registrada
+
+### Fluxo Principal
+1. receber dados da venda 
+2.  definir vencimento
+3.  salvar conta
+
+### Fluxos Alternativos / Exceções
+- FA01 — Erro no registro  
+- FA02 — dados inválidos 
+
+### Relacionamentos
+- **Include:** UC10
+- **Extend:** nenhum  
+
+### Diagramas do caso de uso
+
+---
+## **UC09 — registrar compra**
+**Ator(es):** Gerente 
+**Descrição:** registra compra de produtos 
+**Pré-condições:** fornecedor cadastrado 
+**Pós-condições:**  Estoque atualizado
+
+### Fluxo Principal
+1. Selecionar fornecedor 
+2. Inserir produtos 
+3. confirmar compras 
+
+### Fluxos Alternativos / Exceções
+- FA01 —  Fornecedor inválido
+- FA02 —  erro no cadastro
+
+### Relacionamentos
+- **Include:** UC10
+- **Extend:** nenhum
+
+### Diagramas do caso de uso
+
+---
+## **UC10 — Atualizar estoque**
+**Ator(es):** Sistema 
+**Descrição:** Atualiza quantidade de produtos no estoque 
+**Pré-condições:** movimnetação realizada 
+**Pós-condições:**  Estoque atualizado
+
+### Fluxo Principal
+1. Receber movimentação 
+2.  Atualizar quantidade
+3. Salvar alterção 
+
+### Fluxos Alternativos / Exceções
+- FA01 — erro de atualização 
+- FA02 — Dados inconsistentes
+
+### Relacionamentos
+- **Include:** nenhum
+- **Extend:** UC01, UC09
+
+### Diagramas do caso de uso
+
+---
+
+
+
+
